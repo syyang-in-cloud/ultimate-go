@@ -13,7 +13,7 @@ func main() {
 
 	// Type can be specific such as int32 or int64.
 	// For example,
-	// - uint8 contains a base 10  number using one byte of memory
+	// - uint8 contains a base 10 number using one byte of memory
 	// - int32 contains a base 10 number using 4 bytes of memory.
 
 	// When we declare a type without being very specific, such as uint or int, it gets mapped

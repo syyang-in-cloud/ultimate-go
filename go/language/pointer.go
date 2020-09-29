@@ -172,5 +172,5 @@ func escapeToHeap() *user {
 // When the GC is running, we have to take a performance cost so all Goroutines can keep running
 // concurrently. The GC also has a group of Goroutines that perform the garbage collection work.
 // It uses 25% of our available CPU capacity for itself.
-// More details about GC and pacing algorithm can be find at:
+// More details about GC and pacing algorithm can be found at:
 // https://github.com/ardanlabs/gotraining/blob/master/topics/go/language/pointers/README.md
