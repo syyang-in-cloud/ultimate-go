@@ -8,7 +8,7 @@ type user struct {
 	email string
 }
 
-// notify implements a method with a value receiver: u of type user
+// notify implements a method with a value receiver: u of type user.
 // In Go, a function is called a method if that function has receiver declared within itself.
 // It looks and feels like a parameter but it is exactly what it is.
 // Using the value receiver, the method operates on its own copy of the value that is used to make
