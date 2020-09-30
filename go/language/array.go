@@ -3,11 +3,11 @@
 // ---------
 
 // Cores DO NOT access main memory directly but their local caches.
-// What store in caches are data and instruction.
+// What stored in caches are data and instruction.
 
 // Cache speed from fastest to slowest: L1 -> L2 -> L3 -> main memory.
-// Scott Meyers: "If performance matter then the total memory you have is the total amount of
-// caches" -> access to main memory is incredibly slow; practically speaking it might not even be there.
+// As Scott Meyers said "If performance matters then the total amount of cache is the total memory."
+// -> access to main memory is incredibly slow; practically speaking it might not even be there.
 
 // How do we write code that can be sympathetic with the caching system to make sure that
 // we don't have a cache miss or at least, we minimize cache misses to our fullest potential?
@@ -15,7 +15,7 @@
 // Processor has a Prefetcher. It predicts what data is needed ahead of time.
 // There are different granularity depending on where we are on the machine.
 // Our programming model uses a byte. We can read and write to a byte at a time. However, from the
-// caching system POV, our granularity is not 1 byte. It is 64 bytes, called a cache line. All
+// caching system point of view, our granularity is not 1 byte. It is 64 bytes, called a cache line. All
 // memory is junked up in this 64 bytes cache line.
 
 // Since the caching mechanism is complex, Prefetcher tries to hide all the latency from us.
@@ -26,11 +26,11 @@
 // The array data structure gives us ability to do so.
 // From the hardware perspective, array is the most important data structure.
 // From Go perspective, slice is. Array is the backing data structure for slice (like Vector in C++).
-// Once we allocate an array, whatever it size, every element is equal distant from other element.
+// Once we allocate an array, whatever its size is, every element is equal distant from other element.
 // As we iterate over that array, we begin to walk cache line by cache line. As the Prefetcher see
-// that access pattern, it can pick it up and hide all the latency from us.
+// that access pattern, it can pick it(What does this `it` mean?) up and hide all the latency from us.
 
-// For example, we have a big nxn matrix. We do LinkedList Traverse, Column Traverse, and Row Traverse
+// For example, we have a big N*N matrix. We do LinkedList Traverse, Column Traverse, and Row Traverse
 // and benchmark against them.
 // Unsurprisingly, Row Traverse has the best performance. It walk through the matrix cache line
 // by cache line and create a predictable access pattern.
