@@ -146,7 +146,7 @@ func main() {
 	// --------------
 
 	// Take a slice of slice2. We want just indexes 2 and 3.
-	// The length is slice3 is 2 and capacity is 6.
+	// The length in slice3 is 2 and capacity is 6.
 	// Parameters are [starting_index : (starting_index + length)]
 	// By looking at the output, we can see that they are sharing the same backing array.
 	// These slice headers get to stay on the stack when we use these value semantics. Only the
