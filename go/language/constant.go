@@ -76,6 +76,8 @@ func main() {
 	// iota
 	// ----
 
+	// The constant generator, iota, is used to create a sequence of related values that begins at zero and increments by one.
+
 	const (
 		A1 = iota // 0 : Start at 0
 		B1 = iota // 1 : Increment by 1
